@@ -11,7 +11,7 @@ const props = defineProps<{
 }>()
 const errorValidateUserName = ref(false)
 const errorValidatePassword = ref(false)
-const displayPassword = computed(() => props.formState.typeRecord !== 'Локальная')
+const displayPassword = computed(() => props.formState.typeRecord === 'LDAP')
 const accountTags = computed({
   get() {
     return props.formState.tags.map(el => el.text).join(';')
