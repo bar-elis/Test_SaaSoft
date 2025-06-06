@@ -1,4 +1,4 @@
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import type { FormState } from '@/pages/AccountsForm/types.ts'
 import { v4 as uuidv4 } from 'uuid'
@@ -20,7 +20,6 @@ export const useAccountsFormStore = defineStore('accountsFormStore', () => {
         return state
       }
     })
-    console.log(accountsData.value)
   }
   const deleteAccount = (id: string) => {
     accountsData.value = accountsData.value.filter(account => account.id !== id)
